@@ -1,0 +1,22 @@
+.search-panel {
+  .input-wrapper {
+    padding-right: 0;
+
+    .search-by-beer {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+    }
+  }
+
+  .btn-wrapper {
+    padding-left: 0;
+
+    .btn {
+      border: {
+        top-left-radius: 0;
+        bottom-left-radius: 0;
+      }
+    }
+  }
+}

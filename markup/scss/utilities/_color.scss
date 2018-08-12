@@ -1,0 +1,39 @@
+@import 'colors/project_default';
+
+$orange-1: #f18b21;
+$orange-2: #d7b230;
+$green-1: #30ad63;
+$red-1: #db4545;
+
+$blue-1: #1f92df;
+$blue-2: #73E8FF;
+$blue-3: #90cff4;
+$blue-4: #00afdb;
+
+$gray-1: #9E9E9E;
+$gray-2: #c3c3c3;
+$gray-3: #a9a9a9;
+$gray-4: #74748a;
+
+
+// General ---------------
+$body-color: #5b6067;
+$body-bg: #f2f6f7;
+// -----------------------
+
+//Buttons----------------
+$btn-navy   : $blue-1;
+
+//Beers-------------------
+$beer-bg: #f9f9f9;
+
+// Popup colors - transfer into 'utilities/colors.scss' file for project
+$popup-border       : $base-border;
+$popup-bg           : $white;
+$popup-shadow       : $black;
+$popup-close-color  : $blue-4;
+$popup-title        : $blue-4;
+// ----------------------
+
+
+

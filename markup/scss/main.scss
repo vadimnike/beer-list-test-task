@@ -1,0 +1,38 @@
+
+// Variables
+@import 'utilities/color';
+@import 'utilities/fonts_var';
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/placeholder';
+
+// Layouts;
+@import 'layouts/bootstrap';
+@import 'layouts/utilities/display';
+@import 'layouts/utilities/flex';
+
+// Base
+// @import 'base/reset'; // uncomment if needed to use(not default template)
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/base';
+
+
+// General
+@import 'general/general';
+@import 'general/button';
+@import 'general/popup';
+@import 'general/spinner';
+
+
+
+// Modules
+@import 'modules/beer-wrapper';
+@import 'modules/sorting-by';
+@import 'modules/search-by-name';
+
+
+// State
+@import 'state/state';
+

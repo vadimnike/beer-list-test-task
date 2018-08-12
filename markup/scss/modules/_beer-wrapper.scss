@@ -1,0 +1,30 @@
+#beers-container {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.beer-wrapper{
+  margin: 10px 0;
+}
+
+.beer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 7px;
+  background: $beer-bg;
+  text-align: center;
+  cursor: pointer;
+
+  img {
+    width: 20%;
+  }
+
+  .sort-data {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+}

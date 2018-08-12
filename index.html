@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Beer list</title>
+  <!--[if lt IE 9]-->
+  <script src="markup/js/includes/libs/html5shiv/dist/html5shiv.min.js"></script>
+  <script src="markup/js/includes/libs/respond/dest/respond.min.js"></script>
+  <!--[endif]-->
+</head>
+<link rel="stylesheet" href="markup/css/main.css">
+<body>
+<div class="container">
+  <div id="find-beer-wrap" class="find-beer-wrap">
+    <h1>Beer list here</h1>
+    <div class="row">
+      <div class="search-panel col-md-8 col-12">
+        <div class="row">
+          <div class="input-wrapper col-md-8 col-8">
+            <input type="text"
+                   class="search-by-beer"
+                   placeholder="Find beer">
+          </div>
+          <div class="btn-wrapper col-md-4 col-4">
+            <button type="button"
+                    id="find-beer"
+                    class="btn navy small rounded">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sorting">
+    <div class="row">
+      <div class="sorting-wrapper col-12">
+        <h3>Sort beers by:</h3>
+        <div class="drop-down">
+          <input class='sort-by'
+                 type="text"
+                 data-sort-field="all"
+                 data-sort-type="all"
+                 value=""
+                 placeholder="Select sorting type" readonly>
+          <ul class="beers-sort-list drop-down-list">
+            <li class="sort-name name-high"
+                data-sort-field="name"
+                data-sort-type="asc">Name - ascending</li>
+            <li class="sort-name name-law"
+                data-sort-field="name"
+                data-sort-type="dsc">Name - descending</li>
+            <li class="sort-name rating-high"
+                data-sort-field="abv"
+                data-sort-type="asc">Alcohol by Volume - ascending</li>
+            <li class="sort-name rating-law"
+                data-sort-field="abv"
+                data-sort-type="dsc">Alcohol by Volume - descending</li>
+            <li class="sort-name rating-high"
+                data-sort-field="ibu"
+                data-sort-type="asc">International Bitterness Units - ascending</li>
+            <li class="sort-name rating-law"
+                data-sort-field="ibu"
+                data-sort-type="dsc">International Bitterness Units - descending</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="beers-container">
+    <div class="loader-wrap">
+      <div class="loader">
+        <svg class="circular"
+             viewBox="25 25 50 50">
+          <circle class="path"
+                  cx="50"
+                  cy="50"
+                  r="20"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-miterlimit="10"/>
+        </svg>
+      </div>
+    </div>
+    <!--Here our beers-->
+  </div>
+</div>
+
+<div id="popup-wrapper"></div>
+<div class="popup-backdrop hide"></div>
+</body>
+<script id="blocks" type="text/x-handlebars-template">
+  {{#if this}}
+  {{#each this}}
+  <div class='col-lg-4 col-md-6 col-sm-6 beer-wrapper'>
+    <div class="beer"
+         data-popup-id="{{id}}"
+         data-abv={{abv}}
+         data-name="{{name}}"
+         data-ibu={{ibu}}>
+      <div class="head-panel">
+        <h3 class="beer-name">{{name}}</h3>
+        <hr>
+        <div class="sort-data">
+          <div class="abv">Alcohol by Volume - <span>{{abv}}%</span></div>
+          <div class="ibu">International Bitterness Units - <span>{{ibu}}</span></div>
+        </div>
+      </div>
+      <img class="beer-img" src="{{image_url}}">
+      <h4 class="beer-tagline">{{tagline}}</h4>
+    </div>
+  </div>
+  {{/each}}
+  {{else}}
+  <p class="empty col-12">Not found.Try search again!</p>
+  {{/if}}
+</script>
+<script id="popup" type="text/x-handlebars-template">
+  <div class="popup">
+    <div class="popup-wrap">
+      {{#each this}}
+      <div class="popup-head">
+        <h3>Overview of {{name}}</h3>
+        <span class="close"></span>
+      </div>
+      <div class="popup-body">
+        <i class="fa fa-window-close-o" aria-hidden="true"></i>
+        <h3 class="title">Description</h3>
+        <p>{{description}}</p>
+        <h3 class="title">Food Pairing</h3>
+        <ul class="ingridient-list">
+          {{#each food_pairing}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="markup/js/includes/libs/handlebars/handlebars.min.js"></script>
+<!--<script src="main.js" ></script>-->
+<!--<script src="app.js" ></script>-->
+<script src="markup/js/main.js" ></script>
+
+</html>

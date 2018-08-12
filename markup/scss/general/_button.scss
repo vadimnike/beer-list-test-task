@@ -1,0 +1,52 @@
+// Buttons style
+.close { // popup close button
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.btn {  // general styles for all buttons(<a>, <button>)
+  @include rem(font-size, 14px);
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 10px 40px;
+  border: 0 none {
+    width: 1px;
+    style: solid;
+    color: transparent;
+  };
+  outline: none 0;
+  background-color: transparent;
+  font-family: $base-font-family;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all 350ms ease-in-out 0s;
+  user-select: none;
+
+  &.small {
+    padding: 10px 16px;
+  }
+
+  &.navy {
+    border-color: $btn-navy;
+    background-color: $btn-navy;
+    color: $white;
+
+    &:hover {
+      border-color: lighten($btn-navy, 10%);
+      background-color: lighten($btn-navy, 10%);
+    }
+  }
+
+  &.rounded {
+    border-radius: 2px;
+  }
+}

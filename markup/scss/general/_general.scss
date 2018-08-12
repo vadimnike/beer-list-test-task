@@ -1,0 +1,42 @@
+html {
+  position: relative;
+  min-height: 100%;
+
+  body {
+    height: 100%;
+    min-height: 1px;
+
+    &.overlay {
+      overflow: hidden;
+    }
+  }
+}
+
+// General classes for project
+body {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+.container {
+  position: relative;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+//Sorting-wrapper
+.sorting-wrapper {
+  margin-top: 10px;
+}
+
+//Beer modal
+.ingridient-list {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+
+
