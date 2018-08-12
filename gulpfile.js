@@ -67,7 +67,7 @@ gulp.task('watcher', function () {
 gulp.task('webserver', function() {
   webserver.server({
     root: './',
-    port: 8888
+    port: 8080
   });
 });
 
